@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.input.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0" styleClass="epostfx.css" stylesheets="@../epostfx.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="epostfx.code.MailLayoutController">
+   <top>
+      <MenuBar id="menu-bar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu id="menu-button" mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem id="test" mnemonicParsing="false" text="Close">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <SplitPane dividerPositions="0.24070450097847357" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TabPane id="test" layoutX="14.0" layoutY="71.0" prefHeight="509.0" prefWidth="242.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                      <Tab text="Inbox">
+                           <content>
+                              <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" prefViewportHeight="480.0" prefViewportWidth="243.0" vbarPolicy="ALWAYS">
+                                 <content>
+                                    <TableView fx:id="tableInbox">
+                                      <columns>
+                                        <TableColumn fx:id="columnDate" prefWidth="75.0" text="Datum" />
+                                        <TableColumn prefWidth="75.0" text="Från" />
+                                          <TableColumn prefWidth="75.0" text="Titel" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                      </Tab>
+                      <Tab text="Kontakter">
+                           <content>
+                              <TableView prefHeight="200.0" prefWidth="200.0">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="Förnamn" />
+                                  <TableColumn prefWidth="75.0" text="Efternamn" />
+                                </columns>
+                              </TableView>
+                           </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>

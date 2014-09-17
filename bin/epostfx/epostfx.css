@@ -1,0 +1,30 @@
+.menu-bar
+{
+	-fx-background-color: rgb(39, 33, 37);
+}
+
+.scroll-pane
+{
+	-fx-border-color: #D0D0D0;
+}
+
+.tab-pane
+{
+	-fx-border-color: #D0D0D0;
+	-fx-border-size: 0;
+}
+
+.tab-pane > .tab-header-area > .tab-header-background
+{
+	-fx-background-color: #D0D0D0;
+}
+
+.split-pane
+{
+	-fx-background-color: rgb(133, 122, 129);
+}
+
+.split-pane:horizontal > .split-pane-divider
+{
+	-fx-background-color: #D0D0D0;
+}
